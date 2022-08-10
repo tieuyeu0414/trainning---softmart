@@ -178,7 +178,7 @@ export default class ManageOrder extends Component<{}, IState> {
                         order.CUSTOMER_NAME = e.currentTarget.value
                         this.setState({order})
                       }}
-                      value={order.CUSTOMER_NAME}
+                      value={order.CUSTOMER_NAME || ''}
                     />
                   </div>
                   <div className ="col-sm-6 p-2">

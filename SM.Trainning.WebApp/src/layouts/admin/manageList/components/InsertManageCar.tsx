@@ -129,7 +129,7 @@ export default class InsertManageCar extends Component<any, IState> {
                         car.NAME = e.currentTarget.value
                         this.setState({car})
                       }} 
-                      value={car.NAME} 
+                      value={car.NAME || ''} 
                       required 
                     />
                   </div>
@@ -142,7 +142,7 @@ export default class InsertManageCar extends Component<any, IState> {
                         car.COLOR = e.currentTarget.value
                         this.setState({car})
                       }} 
-                      value={car.COLOR}
+                      value={car.COLOR || ''}
                     />
                   </div>
                   <div className="grid-item">
@@ -154,7 +154,7 @@ export default class InsertManageCar extends Component<any, IState> {
                         car.PLATE_NUMBER = e.currentTarget.value
                         this.setState({car})
                       }} 
-                      value={car.PLATE_NUMBER}
+                      value={car.PLATE_NUMBER || ''}
                       required 
                       disabled={id ? true: false}
                     />
@@ -167,7 +167,7 @@ export default class InsertManageCar extends Component<any, IState> {
                         car.PRICE = e
                         this.setState({car})
                       }} 
-                      value={car.PRICE} 
+                      value={car.PRICE || 0} 
                     />
                   </div>
                 </div>
@@ -181,7 +181,7 @@ export default class InsertManageCar extends Component<any, IState> {
                       car.DESCRIPTION = e.currentTarget.value
                       this.setState({car})
                     }} 
-                    value={car.DESCRIPTION}
+                    value={car.DESCRIPTION || ''}
                   />
                 </div>
                 

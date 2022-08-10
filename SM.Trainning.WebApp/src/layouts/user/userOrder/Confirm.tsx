@@ -202,7 +202,7 @@ export default class Confirm extends Component<IProps, IState> {
                     <label>Số thời gian thuê</label>
                     <SMNumericBox 
                       className='text-box' 
-                      value={serviceOrder.ORDER_DURATION} 
+                      value={serviceOrder.ORDER_DURATION || 0} 
                       onChange={(e)=>{
                         serviceOrder.ORDER_DURATION = e;
                         this.setState({serviceOrder})
@@ -237,7 +237,7 @@ export default class Confirm extends Component<IProps, IState> {
                     <label>Tên khách hàng</label>
                     <TextBox 
                       className='text-box' 
-                      value={serviceOrder.CUSTOMER_NAME} 
+                      value={serviceOrder.CUSTOMER_NAME || ''} 
                       onChange={(e)=>{
                         serviceOrder.CUSTOMER_NAME = e.currentTarget.value;
                         this.setState({serviceOrder})
@@ -251,7 +251,7 @@ export default class Confirm extends Component<IProps, IState> {
                   <TextArea 
                     className='text-area' 
                     rows={8} 
-                    value={serviceOrder.DESCRIPTION} 
+                    value={serviceOrder.DESCRIPTION || ''} 
                     onChange={(e)=>{
                       serviceOrder.DESCRIPTION = e.currentTarget.value;
                       this.setState({serviceOrder})

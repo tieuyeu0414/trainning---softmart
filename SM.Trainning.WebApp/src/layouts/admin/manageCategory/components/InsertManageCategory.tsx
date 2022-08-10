@@ -101,7 +101,7 @@ export default class InsertManageCategory extends Component<any, IState> {
                       this.setState({ carCategory })
                     }} 
                     required 
-                    value={carCategory?.NAME} 
+                    value={carCategory?.NAME || ''} 
                   />
                 </div>
                 <div className="grid-item">
@@ -114,7 +114,7 @@ export default class InsertManageCategory extends Component<any, IState> {
                       this.setState({ carCategory })
                     }}  
                     rows={10} 
-                    value={carCategory?.DESCRIPTION} 
+                    value={carCategory?.DESCRIPTION || ''} 
                   />
                 </div>
                 <div className="grid-item">

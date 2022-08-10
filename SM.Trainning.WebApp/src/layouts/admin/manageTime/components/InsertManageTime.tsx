@@ -90,7 +90,7 @@ export default class InsertManageTime extends Component<any, IState> {
                       timeCategory.NAME = e.currentTarget.value;
                       this.setState({timeCategory})
                     }} 
-                    value={timeCategory.NAME} 
+                    value={timeCategory.NAME || ''} 
                     required 
                   />
                 </div>
@@ -103,7 +103,7 @@ export default class InsertManageTime extends Component<any, IState> {
                       timeCategory.DESCRIPTION = e.currentTarget.value;
                       this.setState({timeCategory})
                     }} 
-                    value={timeCategory.DESCRIPTION} 
+                    value={timeCategory.DESCRIPTION || ''} 
                     rows={10} 
                   />
                 </div>
