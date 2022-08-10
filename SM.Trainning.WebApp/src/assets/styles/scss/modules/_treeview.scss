@@ -1,0 +1,53 @@
+.sm-tree {
+    padding: 0.571em 0.4em;
+    border: 1px solid #c8c8c8;
+    border-radius: 3px;
+
+    .sm-tree-container {
+        .sm-treenode {
+            padding: 0.2em;
+
+            .sm-treenode-content {
+                display: flex;
+                padding: 0 10px;
+                cursor: pointer;
+                border-radius: 3px;
+                align-items: center;
+
+                .sm-tree-toggler {
+                    width: 1em;
+                    margin: 0 0.286em 0 0;
+                    padding-right: 5px;
+                }
+
+                .sm-tree-checkbox {
+                    width: 1em;
+                    margin: 0 0.286em 0 0;
+                    padding-right: 5px;
+                    font-size: large;
+                }
+
+                .sm-treenode-label {
+                    width: 100%;
+                    padding: 5px 0;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    // white-space: nowrap;
+                }
+            }
+
+            .sm-treenode-select {
+                background-color: $base-color;
+                color: white;
+            }
+            .sm-treenode-content:hover:not(.sm-treenode-select):not(.sm-treenode-unselectable) {
+                background-color: #eaeaea;
+                color: $base-color;
+            }
+
+            .sm-treenode-child {
+                padding: 0 0 0 1em;
+            }
+        }
+    }
+}

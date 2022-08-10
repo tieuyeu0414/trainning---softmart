@@ -1,0 +1,67 @@
+.layout-wrapper {
+  padding: 0;
+  min-height: calc(100vh - 50px);
+  position: relative;
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #bcbcbc;
+    border-radius: 16px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #f2f2f2;
+    border-radius: 16px;
+  }
+}
+
+.layout-main {
+  width: calc(100% - 270px);
+  margin-top: 50px;
+  margin-left: auto !important;
+  margin-bottom: 44px;
+  // padding: 0px 0px 44px;
+}
+.popup {
+  width: 100%;
+  margin: 0;
+  position: static !important;
+}
+.enlarge-menu {
+  .topbar-menu {
+    margin-left: 70px;
+  }
+  .main-menu li .sub-menu {
+    display: none;
+  }
+  .layout-main,
+  .footer {
+    width: calc(100% - 70px);
+  }
+}
+
+.ui-card-shadow {
+  background-color: $white;
+  padding: 7px;
+  padding-bottom: 50px;
+  border-radius: 3px;
+}
+
+.home-image {
+  width: 100%;
+  height: calc(100vh - 95px);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    height: 100%;
+  }
+}
+
+.text-editor-warpper ol,
+.text-editor-warpper ul,
+.text-editor-warpper li {
+  list-style: inherit;
+}

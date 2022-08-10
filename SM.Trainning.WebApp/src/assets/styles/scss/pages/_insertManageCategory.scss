@@ -1,0 +1,39 @@
+.grid-category{
+    display: grid;
+    grid-template-columns: auto;
+    grid-column-gap: 10px;
+    .grid-item{
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        label{
+            margin-right: 10px;
+            font-size: 16px;
+            width: 100px;
+        }
+        .text-box{
+            padding: 6px 12px;
+        }
+        .text-area{
+            width: 35%;
+            min-width: 188px;
+            padding: 6px 12px;
+        }
+        .btn-submit{
+            padding: 8px 18px;
+            cursor: pointer;
+            background-color: white;
+            border: 1px solid rgba(0, 0, 0, 0.14);
+            border-radius: 5px;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.14);
+        }
+    }
+}
+
+.confirm-grid{
+    .grid-item{
+        label{
+            width: 130px;
+        }
+    }
+}

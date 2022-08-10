@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SM.Trainning.Api", "SM.Trainning.Api\SM.Trainning.Api.csproj", "{E3FDC8AD-6281-468B-99A8-6BE0CB2C3072}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SM.Training.BookingCar", "SM.Training.BookingCar\SM.Training.BookingCar.csproj", "{0ABBA732-09C8-4F04-8C97-523CE168008F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SM.Training.SharedComponent", "SM.Training.SharedComponent\SM.Training.SharedComponent.csproj", "{B05D000F-E2C7-4424-97DB-A9C40BA8421D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SM.Training.Util", "SM.Training.Util\SM.Training.Util.csproj", "{6022571F-2C9A-42A4-A382-F1283566C0E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SM.Training.Common", "SM.Training.Common\SM.Training.Common.csproj", "{E8993D3D-47E4-4EA2-B4F6-341CE01F6EE0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{C92D0E8A-A0EF-49E9-AEEC-2DD68CF9394B}"
+	ProjectSection(SolutionItems) = preProject
+		Lib\Oracle.ManagedDataAccess.dll = Lib\Oracle.ManagedDataAccess.dll
+		Lib\SMCD.dll = Lib\SMCD.dll
+		Lib\SMK.dll = Lib\SMK.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E3FDC8AD-6281-468B-99A8-6BE0CB2C3072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3FDC8AD-6281-468B-99A8-6BE0CB2C3072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3FDC8AD-6281-468B-99A8-6BE0CB2C3072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3FDC8AD-6281-468B-99A8-6BE0CB2C3072}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ABBA732-09C8-4F04-8C97-523CE168008F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ABBA732-09C8-4F04-8C97-523CE168008F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ABBA732-09C8-4F04-8C97-523CE168008F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ABBA732-09C8-4F04-8C97-523CE168008F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B05D000F-E2C7-4424-97DB-A9C40BA8421D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B05D000F-E2C7-4424-97DB-A9C40BA8421D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B05D000F-E2C7-4424-97DB-A9C40BA8421D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B05D000F-E2C7-4424-97DB-A9C40BA8421D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6022571F-2C9A-42A4-A382-F1283566C0E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6022571F-2C9A-42A4-A382-F1283566C0E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6022571F-2C9A-42A4-A382-F1283566C0E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6022571F-2C9A-42A4-A382-F1283566C0E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8993D3D-47E4-4EA2-B4F6-341CE01F6EE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8993D3D-47E4-4EA2-B4F6-341CE01F6EE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8993D3D-47E4-4EA2-B4F6-341CE01F6EE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8993D3D-47E4-4EA2-B4F6-341CE01F6EE0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {205351FD-1D7D-460A-AA5F-CC352B8F92F6}
+	EndGlobalSection
+EndGlobal

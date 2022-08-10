@@ -1,0 +1,26 @@
+.toolbar {
+  clear: both;
+  background-color: $white;
+  /*position: fixed !important;*/
+  position: sticky;
+  z-index: 800;
+  top: 50px;
+  left: 0;
+  border-bottom: 3px solid #ededed;
+  width: 100%;
+  padding: 10px 10px 5px 7px;
+  height: 50px;
+}
+
+.toolbar h1{
+  font-size: 18px;
+  /*font-family: tahoma;*/
+  margin-top: 10px;
+  color: $base-color;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.toolbar button{
+  margin-left: 5px !important;
+}

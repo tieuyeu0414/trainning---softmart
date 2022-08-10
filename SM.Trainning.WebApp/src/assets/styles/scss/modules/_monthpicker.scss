@@ -1,0 +1,76 @@
+.sm-monthpicker {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+
+  .sm-textbox {
+    text-align: right;
+    width: 100%;
+  }
+
+  .list-container {
+    position: absolute;
+    background: $white;
+    width: 120px;
+    right: 0px;
+    top: 30px;
+    // max-height: 200px;
+    overflow: auto;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    z-index: 100;
+
+    display: flex;
+
+    cursor: pointer;
+
+    .month-selector {
+      width: 33%;
+    }
+
+    .year-selector {
+      width: 66%;
+
+      .arrow {
+        padding: 5px 10px;
+        height: 24px;
+        line-height: 14px;
+
+        background-position: calc(50% - 2px) calc(1em - 3px), calc(50% + 2px) calc(1em - 3px);
+        background-size: 5px 5px, 5px 5px, 1px 1.5em;
+        background-repeat: no-repeat;
+        background-color: white;
+      }
+
+      .arrow-up {
+        background-image: linear-gradient(135deg, transparent 50%, gray 50%),
+          linear-gradient(45deg, gray 50%, transparent 50%);
+      }
+
+      .arrow-down {
+        background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+          linear-gradient(135deg, gray 50%, transparent 50%);
+      }
+    }
+
+    .list-item {
+      padding: 5px 10px;
+      text-align: center;
+
+      &:hover(:not(.disabled)) {
+        background: $base-color;
+        color: $white;
+      }
+
+      &.selected {
+        background: $base-color;
+        color: $white;
+      }
+
+      &.disabled {
+        color: #495057;
+        opacity: 0.6;
+      }
+    }
+  }
+}

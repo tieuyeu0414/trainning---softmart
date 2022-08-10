@@ -1,0 +1,41 @@
+.sm-button {
+  border-radius: 3px;
+  &:hover {
+    cursor: pointer;
+    // opacity: .8;
+    background-color: #683c8f !important;
+    color: #fff;
+  }
+}
+
+.sm-delete-button {
+  border: 1px solid #c01120;
+  border-radius: 3px;
+  &:hover {
+    background-color: #683c8f !important;
+    cursor: pointer;
+    color: #fff;
+    opacity: .8;
+  }
+}
+
+.sm-button-link {
+  padding: 7px 10px;
+  min-height: 32px;
+  display: inline-block;
+  border: 1px solid $base-color;
+  color:#222;
+  border-radius: 3px;
+  margin-left: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  &:hover {
+    cursor: pointer;
+    // opacity: 0.8;
+    // color: #222;
+    background-color: #683c8f!important;
+    color: #fff!important;
+  }
+  &:visited {
+    color:#222;
+  }
+}

@@ -1,0 +1,30 @@
+.sm-context-menu{
+    position: fixed;
+    z-index: 999999;
+    padding: 1px 2px 2px 1px;
+}
+.sm-context-menu-content{
+    background-color: #fff;
+
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    min-width: 100px;
+    min-height: 40px;
+    width: auto;
+    height: auto;
+}
+
+.sm-context-menu-item
+{
+    padding: 5px 5px 8px 5px;
+    cursor: pointer;
+    color: black;
+    &:hover{
+        background-color: #00aced;
+        color: #fff !important;
+        i{color:  #fff  !important;}
+    }
+    span{white-space: nowrap;}
+    i{color: seagreen;font-weight: 600;}
+}

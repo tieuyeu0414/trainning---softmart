@@ -1,0 +1,73 @@
+.sm-treebox {
+  display: inline-block;
+}
+.treebox {
+  border: 1px solid #dadada;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  min-height: 30px;
+}
+.treebox i {
+  color: #848484;
+}
+.treebox-content {
+  display: block;
+  position: absolute;
+  z-index: 600;
+}
+.p-tree {
+  border: 1px solid #c8c8c8;
+  background-color: #ffffff;
+  color: #333333;
+  padding: 0.571em 1em;
+  border-radius: 3px;
+  .p-tree-container {
+    height: 100%;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 0.286em;
+    margin: 0;
+  }
+  .p-treenode {
+    background-attachment: scroll;
+    background-color: transparent;
+    background-image: none;
+    background-position: 0 0;
+    background-repeat: repeat-y;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0.143em 0;
+    .p-treenode-content {
+      padding: 5px 10px;
+      border: 1px solid transparent;
+      transition: background-color 0.2s, box-shadow 0.2s;
+      border-radius: 3px;
+      color: #848484;
+      cursor: pointer;
+      .p-tree-toggler {
+        vertical-align: middle;
+        display: inline-block;
+        float: none;
+        margin: 0 0.286em 0 0;
+        color: #848484;
+        cursor: pointer;
+      }
+      &.p-treenode-selectable:not(.p-highlight):not(.p-disabled):hover {
+        background-color: #eaeaea;
+        color: #009396;
+      }
+      &.p-treenode-selectable {
+        color: #333333;
+      }
+    }
+  }
+  .p-treenode-children {
+    margin: 0;
+    padding: 0 0 0 1em;
+  }
+}

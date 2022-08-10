@@ -1,0 +1,9 @@
+.hover-popup {
+  position: absolute;
+  &.hp-left {
+    left: 0;
+  }
+  &.hp-right {
+    right: 0;
+  }
+}

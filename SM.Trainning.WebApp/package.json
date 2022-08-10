@@ -1,0 +1,79 @@
+{
+  "name": "webapp",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^28.0.0",
+    "@ckeditor/ckeditor5-react": "^3.0.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "@types/jest": "^24.9.1",
+    "@types/node": "^12.12.54",
+    "@types/qs": "^6.9.4",
+    "@types/react": "^16.9.46",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-leaflet": "^2.5.2",
+    "@types/react-router-dom": "^5.1.5",
+    "bootstrap": "^4.5.2",
+    "classnames": "^2.2.6",
+    "env-cmd": "^10.1.0",
+    "leaflet": "^1.6.0",
+    "mobx": "^5.15.6",
+    "mobx-react": "^6.2.5",
+    "moment": "^2.27.0",
+    "moment-timezone": "^0.5.31",
+    "node-sass": "^4.14.1",
+    "primeicons": "^2.0.0",
+    "primereact": "^4.2.2",
+    "qs": "^6.9.4",
+    "quill": "^1.3.7",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.3.0",
+    "react-dom": "^16.13.1",
+    "react-fontawesome": "^1.7.1",
+    "react-froala-wysiwyg": "^4.0.8",
+    "react-hook-form": "^5.7.2",
+    "react-json-view": "^1.21.3",
+    "react-leaflet": "^2.7.0",
+    "react-moment": "^0.9.7",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.4",
+    "react-transition-group": "^4.4.1",
+    "typescript": "^3.9.7"
+  },
+  "scripts": {
+    "build-css": "node-sass --output-style compressed -o src/assets/styles/css/compressed src/assets/styles/scss",
+    "watch-css": "npm run build-css && node-sass --output-style compressed -o src/assets/styles/css/compressed src/assets/styles/scss --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build:ST": "env-cmd -f .env.ST  react-scripts build",
+    "build:SIT": "env-cmd -f .env.SIT  react-scripts build",
+    "build:UAT": "env-cmd -f .env.UAT react-scripts build",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.168",
+    "npm-run-all": "^4.1.5"
+  }
+}

@@ -1,0 +1,57 @@
+.main-wrapper {
+    display: flex;
+    max-height: calc(100vh - 80px);
+    position: relative;
+    overflow: hidden;
+
+    .left-menu {
+        padding: 0 10px;
+        margin-top: 7px;
+        background: white;
+        border-right: 3px solid #ededed;
+        min-width: 120px;
+        max-width: 180px;
+        overflow-y: scroll;
+
+        .menu-item {
+            display: block;
+            padding: 10px 0 0px 0;
+            margin-bottom: 5px;
+            color: #5a5c61;
+            font-weight: 600;
+            line-height: 20px;
+
+            &.active {
+                color: #683c8f;
+                border-bottom: 2px solid #683c8f;
+            }
+
+            &:hover {
+                color: #683c8f;
+            }
+        }
+    }
+
+    .main-content {
+        overflow-y: scroll;
+        position: relative;
+        width: 100%;
+
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #bcbcbc;
+            border-radius: 16px;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: #f2f2f2;
+            border-radius: 16px;
+        }
+
+        .toolbar {
+            top: 0px;
+        }
+    }
+}

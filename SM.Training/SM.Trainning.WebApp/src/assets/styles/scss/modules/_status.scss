@@ -1,0 +1,77 @@
+.sm-status-inactive,.sm-status-running,.sm-status-fail,.sm-status-active {
+  position: relative;
+  display: inline-block;
+  .status-tooltip {
+    line-height: 12px;
+    position: absolute;
+    top:-1px;
+    left: 20px;
+    font-size: 11px;
+    border-radius: 3px;
+    padding:3px 5px;
+    white-space: nowrap;
+    background-color: $white;
+    display: none;
+    z-index: 1;
+  }
+  &:hover {
+    .status-tooltip {
+      display: inline-block;
+    }
+  }
+}
+.status-tooltip {
+  &:before {
+    content: '';
+    position: absolute;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    left: -5px;
+    top: 5px;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-right: 4px solid $white;
+    left: -3px;
+    top: 5px;
+  }
+}
+.sm-status-inactive {
+  color:#9C9A9E;
+  .status-tooltip {
+    border: 1px solid #9C9A9E;
+    &:before {
+      border-right: 4px solid #9C9A9E;
+    }
+  }
+}
+.sm-status-running {
+  color:#E8D30E;
+  .status-tooltip {
+    border: 1px solid #E8D30E;
+    &:before {
+      border-right: 4px solid #E8D30E;
+    }
+  }
+}
+.sm-status-fail {
+  color:#ff0000;
+  .status-tooltip {
+    border: 1px solid #ff0000;
+    &:before {
+      border-right: 4px solid #ff0000;
+    }
+  }
+}
+.sm-status-active {
+  color:#00b500;
+  .status-tooltip {
+    border: 1px solid #00b500;
+    &:before {
+      border-right: 4px solid #00b500;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.alert-popup {
+  width: 300px;
+  display: flex;
+  position: fixed;
+  top: 90px;
+  right:30px;
+  padding: 20px 40px 20px 20px;
+  color: #fff;
+  z-index: 10000;
+  &.success {
+    background-color: #34A835;
+  }
+  &.warning {
+    background-color: #ED990B;
+  }
+  &.error {
+    background-color: #e91224;
+  }
+  .close-popup {
+    position: absolute;
+    top: 5px;
+    right:7px;
+    font-size: 10px;
+    font-weight: 300;
+    cursor: pointer;
+  }
+}

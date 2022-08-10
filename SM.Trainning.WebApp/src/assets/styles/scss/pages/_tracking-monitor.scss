@@ -1,0 +1,104 @@
+.wapper
+{
+    margin: 0px;
+    padding: 10px;
+    min-height: calc(100vh);
+    position: relative;
+    background-color: black;    
+}
+
+.wapper > table
+{
+    border: 0px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.left-side
+{
+    vertical-align: top;
+    padding: 10px;
+    width: 350px;
+}
+
+.left-side > ul > li{
+    padding-top: 10px;
+}
+
+.left-side > ul > li > ul > li{
+    padding-top: 5px;
+    padding-left: 20px;
+}
+
+.area-name
+{
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+.area-name:hover
+{
+    color: yellow;
+}
+.building-name
+{
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+.building-name:hover
+{
+    color: yellow !important;
+}
+
+.right-side
+{
+    vertical-align: top;
+}
+.list-monitor
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.list-monitor > thead
+{
+    color: yellow;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.list-monitor > thead > tr > th, 
+.list-monitor > tbody > tr > td
+{
+    border: 1px solid #444;
+} 
+
+.list-monitor > thead > tr > th
+{
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.list-monitor > tbody > tr > td
+{
+    padding: 4px 3px;
+    color: #fff;
+}
+
+.monitor-status
+{
+    font-weight: bold;
+    text-align: center;
+}
+
+.monitor-title
+{
+    color: #00ffff;
+}
+.monitor-title:hover
+{
+    color: #ffff00;
+}

@@ -1,0 +1,31 @@
+// Font Colors
+$base-color: #683c8f;
+$white: #fff;
+$black: #000;
+$base-font-family:"Segoe UI", Open Sans, Helvetica Neue, sans-serif;
+$base-font-color:#5a5c61;
+$base-font-size:14px;
+$base-font-weight:normal;
+$base-line-height:1;
+$base-background-color:#edf0f5;
+
+//Font weight
+$ultrathin:100;
+$light:200;
+$thin:300;
+$regular:400;
+$medium:500;
+$semibold:600;
+$bold:700;
+$heavy:800;
+$ultraheavy:900;
+
+//Responsive
+$screen-xs:767px;
+$screen-sm:768px;
+$screen-md:992px;
+$screen-lg:1200px;
+
+//grid
+$screen-sm-max: ($screen-md - 1);
+$screen-md-max: ($screen-lg - 1);

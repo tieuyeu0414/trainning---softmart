@@ -1,0 +1,17 @@
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.SharedComponent\bin\Debug\net5.0\SM.Training.SharedComponent.deps.json
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.SharedComponent\bin\Debug\net5.0\SM.Training.SharedComponent.dll
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.SharedComponent\bin\Debug\net5.0\ref\SM.Training.SharedComponent.dll
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.SharedComponent\bin\Debug\net5.0\SM.Training.SharedComponent.pdb
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.SharedComponent\bin\Debug\net5.0\SMCD.dll
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.SharedComponent\bin\Debug\net5.0\Oracle.ManagedDataAccess.dll
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.SharedComponent\obj\Debug\net5.0\SM.Training.SharedComponent.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.SharedComponent\obj\Debug\net5.0\SM.Training.SharedComponent.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.SharedComponent\obj\Debug\net5.0\SM.Training.SharedComponent.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.SharedComponent\obj\Debug\net5.0\SM.Training.SharedComponent.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.SharedComponent\obj\Debug\net5.0\SM.Training.SharedComponent.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.SharedComponent\obj\Debug\net5.0\SM.Training.SharedComponent.csproj.CopyComplete
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.SharedComponent\obj\Debug\net5.0\SM.Training.SharedComponent.dll
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.SharedComponent\obj\Debug\net5.0\ref\SM.Training.SharedComponent.dll
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.SharedComponent\obj\Debug\net5.0\SM.Training.SharedComponent.pdb
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.SharedComponent\bin\Debug\net5.0\SMCU.dll
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.SharedComponent\bin\Debug\net5.0\SMK.dll

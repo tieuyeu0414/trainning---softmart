@@ -1,0 +1,54 @@
+.sm-tabview{
+  .tabview-nav{
+    margin-bottom: -1px;
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  .tabview-nav li {
+    border-bottom: 0;
+    top: 1px;
+    display: block;
+    list-style: none;
+    float: left;
+    position: relative;
+    margin: 0 .125em 1px 0;
+    padding: 0;
+    white-space: nowrap;
+    a {
+      margin-right: 2px;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      border: 1px solid #c8c8c8;
+      background-color: #f4f4f4;
+      float: none;
+      display: inline-block;
+      color: #333333;
+      padding: 0.571em 1em;
+      font-weight: 700;
+      transition: background-color 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+    }
+    &:hover a {
+      background-color: #dbdbdb;
+      border: 1px solid #dbdbdb;
+    }
+    &.tabview-highlight a{
+      background-color: $base-color;
+      border: 1px solid $base-color;
+      //background-color: #007ad9;
+      //border: 1px solid #007ad9;
+      color: #ffffff;
+    }
+  }
+  .tabview-panels {
+    background-color: #ffffff;
+    padding: 0.571em 1em;
+    border: 1px solid #c8c8c8;
+    color: #333333;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}

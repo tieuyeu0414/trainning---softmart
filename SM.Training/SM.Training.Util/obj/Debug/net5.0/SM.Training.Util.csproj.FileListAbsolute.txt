@@ -1,0 +1,12 @@
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Util\bin\Debug\net5.0\SM.Training.Util.deps.json
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Util\bin\Debug\net5.0\SM.Training.Util.dll
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Util\bin\Debug\net5.0\ref\SM.Training.Util.dll
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Util\bin\Debug\net5.0\SM.Training.Util.pdb
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Util\obj\Debug\net5.0\SM.Training.Util.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Util\obj\Debug\net5.0\SM.Training.Util.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Util\obj\Debug\net5.0\SM.Training.Util.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Util\obj\Debug\net5.0\SM.Training.Util.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Util\obj\Debug\net5.0\SM.Training.Util.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Util\obj\Debug\net5.0\SM.Training.Util.dll
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Util\obj\Debug\net5.0\ref\SM.Training.Util.dll
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Util\obj\Debug\net5.0\SM.Training.Util.pdb

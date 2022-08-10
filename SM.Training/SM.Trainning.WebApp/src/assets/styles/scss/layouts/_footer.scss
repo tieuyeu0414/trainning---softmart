@@ -1,0 +1,19 @@
+.footer-FlexOffice {
+  // background-color: #003e67;
+  background-color: #683c8f;
+  color: #fff;
+  padding: 7px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  position: fixed;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  z-index: 1000;
+  border-top: 2px solid;
+}
+
+.download-app:hover {
+  opacity: 0.8;
+}

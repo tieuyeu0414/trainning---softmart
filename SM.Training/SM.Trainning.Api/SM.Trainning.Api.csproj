@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SM.Training.BookingCar\SM.Training.BookingCar.csproj" />
+    <ProjectReference Include="..\SM.Training.SharedComponent\SM.Training.SharedComponent.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Oracle.ManagedDataAccess">
+      <HintPath>..\Lib\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="SMCD">
+      <HintPath>..\Lib\SMCD.dll</HintPath>
+    </Reference>
+    <Reference Include="SMCU">
+      <HintPath>..\Lib\SMCU.dll</HintPath>
+    </Reference>
+    <Reference Include="SMK">
+      <HintPath>..\Lib\SMK.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

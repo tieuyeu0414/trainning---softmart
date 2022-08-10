@@ -1,0 +1,105 @@
+.h-datatable {
+  table {
+    //border-collapse: collapse;
+    min-width: 100%;
+    table-layout: auto;
+    vertical-align: middle;
+    text-align: left !important;
+    position: relative !important;
+    border:1px solid #c8c8c8;
+    border-bottom: none;
+  }
+  tr > th {
+    padding: 11px 4px !important;
+    background: $base-color;
+    color: $white;
+    font-size: 13px;
+    text-align: center;
+    border-right: 1px solid #c8c8c8;
+    font-weight: 600;
+    vertical-align: middle;
+    line-height: 16px;
+    z-index: 1;
+    &:last-child {
+      border: none;
+    }
+  }
+  tbody tr {
+    background: $white;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    td {
+      background: inherit;
+      border-bottom: 1px solid #c8c8c8;
+      padding: 7px 3px;
+      font-size: 13px;
+      vertical-align: middle;
+      line-height: 16px;
+    }
+    &:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    &.no-color {
+      background-color: transparent;
+    }
+  }
+  &.small-padding{
+    tbody tr td{
+      padding: 3px;
+    }
+  }
+}
+
+.h-datatable.layout-auto {
+  table {
+    table-layout: auto;
+  }
+}
+
+.h-datatable, .h-datagrid {
+  .sm-textbox,.sm-combobox,.sm-combo-checkbox,.sm-numericbox .p-inputtext,.sm-datepicker,.sm-datepicker .p-inputtext {
+    border-radius: 0;
+    min-height: 26px;
+    height: 26px;
+    font-size: 13px;
+  }
+}
+.search-table, .module-full {
+  .sm-textbox,.sm-combobox,.sm-combo-checkbox,.sm-numericbox .p-inputtext,.sm-datepicker,.sm-datepicker .p-inputtext, .sm-status-running {
+    width:100%;
+  }
+}
+
+.h-datagrid {
+  width: 100%;
+  margin-top: 20px;
+  ul{
+    width:100%;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #c8c8c8;
+    border-bottom: none;
+    float: left;
+  }
+  li{
+    width:50%;
+    display: flex;
+    float: left;
+    .h-datagrid-title{
+      width:40%;
+      border-right: 1px solid #c8c8c8;
+      border-bottom: 1px solid #c8c8c8;
+      padding: 3px 7px;
+      background: #eaeaea;
+      line-height: 26px;
+    }
+    .h-datagrid-content{
+      flex: 1;
+      padding: 3px 7px;
+      border-bottom: 1px solid #c8c8c8;
+      line-height: 26px;
+    }
+    &:nth-child(odd) .h-datagrid-content{
+      border-right: 1px solid #c8c8c8;
+    }
+  }
+}

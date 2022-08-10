@@ -1,0 +1,17 @@
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Common\bin\Debug\net5.0\SM.Training.Common.deps.json
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Common\bin\Debug\net5.0\SM.Training.Common.dll
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Common\bin\Debug\net5.0\ref\SM.Training.Common.dll
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Common\bin\Debug\net5.0\SM.Training.Common.pdb
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Common\bin\Debug\net5.0\SMCD.dll
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Common\bin\Debug\net5.0\SMK.dll
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Common\bin\Debug\net5.0\Oracle.ManagedDataAccess.dll
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Common\obj\Debug\net5.0\SM.Training.Common.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Common\obj\Debug\net5.0\SM.Training.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Common\obj\Debug\net5.0\SM.Training.Common.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Common\obj\Debug\net5.0\SM.Training.Common.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Common\obj\Debug\net5.0\SM.Training.Common.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Common\obj\Debug\net5.0\SM.Training.Common.csproj.CopyComplete
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Common\obj\Debug\net5.0\SM.Training.Common.dll
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Common\obj\Debug\net5.0\ref\SM.Training.Common.dll
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Common\obj\Debug\net5.0\SM.Training.Common.pdb
+C:\Users\Admin\Desktop\Trainning\SM.Training\SM.Training.Common\bin\Debug\net5.0\SMCU.dll

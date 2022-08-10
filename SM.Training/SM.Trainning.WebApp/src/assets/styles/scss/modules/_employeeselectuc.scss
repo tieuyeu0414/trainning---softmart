@@ -1,0 +1,28 @@
+.employee-seclect-uc {
+    // position: relative;
+    display: flex;
+    width: 100%;
+    .search-box-container {
+        width: 100%;
+    }
+    .search-box-content {
+        height: 200px;
+        position: absolute;
+        z-index: 3;
+        overflow: auto;
+        background-color: white;
+        border: 1px solid #ccc;
+
+        .search-box-item {
+            &:hover {
+                background-color: #0388e5 !important;
+                color: white !important;
+              }
+              cursor: pointer;
+        }
+
+        tr th {
+            text-align: center!important;
+        }
+    }
+}

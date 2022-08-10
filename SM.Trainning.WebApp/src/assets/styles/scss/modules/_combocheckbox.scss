@@ -1,0 +1,208 @@
+/** MultiSelect **/
+.sm-combo-checkbox{
+  display: inline-block;
+  position: relative;
+  width: auto;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #dadada;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  border-radius: 3px;
+  min-height: 30px;
+  line-height: 16px;
+  &.p-disabled {
+    .p-multiselect-trigger,.p-multiselect-label{
+      cursor: auto
+    }
+
+  }
+  .p-multiselect-label-empty {
+    overflow: hidden;
+    visibility: hidden;
+  }
+  .p-multiselect-label {
+    display: block;
+    padding: 5px 25px 5px 8px;
+    width: auto;
+    border: 0;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .p-multiselect-trigger {
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 0;
+    cursor: pointer;
+    width: 1.5em;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 .25em;
+    .p-multiselect-trigger-icon {
+      top: 50%;
+      left: 50%;
+      margin-top: -.5em;
+      margin-left: -.5em;
+      position: absolute;
+    }
+  }
+  .p-hidden {
+    display: none;
+  }
+}
+.p-multiselect-header {
+  margin-bottom: 0.3em;
+  padding: .25em;
+  position: relative;
+  text-align: left;
+  .p-checkbox {
+    display: inline-block;
+    vertical-align: middle;
+    cursor:pointer;
+  }
+  .p-multiselect-filter-container {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 65%;
+    .p-multiselect-filter-icon {
+      position: absolute;
+      top: .25em;
+      left: .125em;
+    }
+  }
+  .p-inputtext {
+    padding: .125em .125em .125em 1.25em;
+    width: 100%;
+  }
+  .p-multiselect-close {
+    position: absolute;
+    right: .375em;
+    top: .375em;
+    display: block;
+    border: 0 none;
+  }
+  a.p-multiselect-all,a.p-multiselect-none {
+    float:left;
+    margin-right: 10px;
+    display: block;
+  }
+  .p-multiselect-close.p-state-hover {
+    padding:0px;
+  }
+}
+
+.p-hidden-accessible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  input, .p-hidden-accessible select {
+    transform: scale(0);
+  }
+
+}
+
+.p-multiselect-panel {
+  border: 1px solid #c8c8c8;
+  background-color: #ffffff;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  padding: 0.2em;
+  position: absolute;
+  min-width: 10em;
+  width: 100%;
+  .p-multiselect-header {
+    border-bottom: 1px solid #eaeaea;
+    color: #333333;
+    background-color: #ffffff;
+    margin: 0;
+    margin-bottom: 0.3em;
+    padding: .25em;
+    position: relative;
+    text-align: left;
+    .p-checkbox {
+      margin-right: 0.5em;
+      float: none;
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+    .p-multiselect-close {
+      color: #848484;
+      margin-top: -0.5em;
+      line-height: 1;
+      transition: box-shadow 0.2s;
+      position: absolute;
+      right: .375em;
+      top: .375em;
+      display: block;
+      border: 0 none;
+      cursor: pointer;
+    }
+  }
+  .p-multiselect-items-wrapper {
+    overflow: auto;
+    position: relative;
+    padding: 0.2em 0;
+  }
+  .p-multiselect-items {
+    padding: 0;
+    .p-multiselect-item.p-highlight {
+      color: #ffffff;
+      background-color: #007ad9;
+    }
+    .p-multiselect-item {
+      border: 0 none;
+      color: #333333;
+      background-color: transparent;
+      transition: background-color 0.2s, box-shadow 0.2s;
+      border-radius: 0;
+      cursor: pointer;
+      font-weight: normal;
+      margin: 1px 0;
+      padding: .125em .25em;
+      text-align: left;
+      white-space: nowrap;
+      display: block;
+      position: relative;
+
+    }
+  }
+  .p-multiselect-list {
+    border: 0 none;
+    margin: 0;
+    list-style-type: none;
+  }
+  .p-checkbox {
+    position: static;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0.5em 0 0;
+    .p-checkbox-box.p-highlight {
+      border-color: #007ad9;
+      background-color: #007ad9;
+      color: #ffffff;
+    }
+    .p-checkbox-box {
+      border: 1px solid #a6a6a6;
+      background-color: #ffffff;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      border-radius: 3px;
+      transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+      .p-checkbox-icon {
+        overflow: hidden;
+        position: relative;
+        font-size: 18px;
+      }
+    }
+  }
+}

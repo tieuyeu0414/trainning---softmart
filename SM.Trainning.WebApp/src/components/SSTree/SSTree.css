@@ -1,0 +1,61 @@
+.flex_tree-ul {
+    padding: 0px 0px 0px 20px;
+    list-style-type: none !important;
+  }
+  
+  .flex_tree-cover {
+    margin-left: -10px !important;
+  }
+  
+  .flex_tree-ul li {
+    padding: 0px !important;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+  }
+  
+  .flex_tree-ul a {
+    cursor: pointer;
+  }
+  
+  .flex_tree-ul li span {
+    display: inline-block;
+    padding: 3px 2px 3px 2px;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  
+  .flex_tree-ul li span:hover {
+    background-color: #A2DAFB !important;
+    cursor: pointer !important;
+  }
+  
+  .flex_tree-selected-node {
+    background-color: #33CCFF !important;
+  }
+
+  .flex_dropdown-data {
+    position: absolute;
+    border: 1px solid #ABADB3;
+    background: #F3F3F3;
+    z-index: 5000 !important;
+    overflow: auto;
+    max-height: 350px;
+    min-height: 120px;
+    display: none;
+    box-sizing: border-box;
+  }
+
+  .flex_dropdown-overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: rgba(0,0,0,0.5); Black background with opacity */
+    z-index: 1000; /* Specify a stack order in case you're using a different order for other elements */
+    /* cursor: pointer; Add a pointer on hover */
+  }
