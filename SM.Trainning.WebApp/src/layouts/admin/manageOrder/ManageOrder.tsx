@@ -68,11 +68,13 @@ export default class ManageOrder extends Component<{}, IState> {
     dtoResponse.pageIndex = this.state.pageIndex;
     dtoResponse.pageSize = this.state.pageSize;
     dtoResponse.SERVICE_ORDER = this.state.order;
+
     const res = await HttpUtils.post<SERVICE_ORDERDTO>(
       ApiUrl.Get_All_ServiceOrder,
       SMX.ApiActionCode.SetupDisplay,
       JSON.stringify(dtoResponse)
     )
+    
     this.setState({
       dataList: res.SERVICE_ORDERs?.map((item, index) => ({
         ...item, 
@@ -158,8 +160,50 @@ export default class ManageOrder extends Component<{}, IState> {
       })
   }
 
+  renderPopup(){
+    const { isPopup, orderUpdate } = this.state;
+    return (
+      <>
+      {
+        isPopup &&
+        <PopupDialog 
+          onClose={()=>this.setState({isPopup: false})}
+          header="Cập nhật"
+          contentContainerStyle={{height: '200px'}}
+        >
+          <div>
+            <label>Thời gian bắt đầu thuê</label>
+            <DatePicker 
+              selectedDate={orderUpdate?.ACTUALSTART_DTG} 
+              onChange={(e)=>{
+                orderUpdate.ACTUALSTART_DTG = Utility.ConvertToUtcDateTime(e)
+                this.setState({orderUpdate})
+              }} 
+            />
+          </div>
+          <br/>
+          <div>
+            <label>Thời gian kết thúc thuê</label>
+            <DatePicker 
+              selectedDate={orderUpdate?.ACTUALEND_DTG} 
+              onChange={(e)=>{
+                orderUpdate.ACTUALEND_DTG = Utility.ConvertToUtcDateTime(e)
+                this.setState({orderUpdate})
+              }} 
+            />
+          </div>
+          <br/>
+          <div style={{textAlign: 'right'}}>
+            <SMButton onClick={()=>this.onUpdate()}>Cập nhật</SMButton>
+          </div>
+        </PopupDialog>
+      }
+      </>
+    )
+  }
+
   render() {
-    const { dataList, order, dataListCarCategory, isPopup, orderUpdate } = this.state;
+    const { dataList, order, dataListCarCategory } = this.state;
     return (
         <div className="layout-main">
             <div className="toolbar">
@@ -249,40 +293,7 @@ export default class ManageOrder extends Component<{}, IState> {
             </div>
 
             {/* popup */}
-            {
-              isPopup &&
-              <PopupDialog 
-                onClose={()=>this.setState({isPopup: false})}
-                header="Cập nhật"
-                contentContainerStyle={{height: '200px'}}
-              >
-                <div>
-                  <label>Thời gian bắt đầu thuê</label>
-                  <DatePicker 
-                    selectedDate={orderUpdate?.ACTUALSTART_DTG} 
-                    onChange={(e)=>{
-                      orderUpdate.ACTUALSTART_DTG = Utility.ConvertToUtcDateTime(e)
-                      this.setState({orderUpdate})
-                    }} 
-                  />
-                </div>
-                <br/>
-                <div>
-                  <label>Thời gian kết thúc thuê</label>
-                  <DatePicker 
-                    selectedDate={orderUpdate?.ACTUALEND_DTG} 
-                    onChange={(e)=>{
-                      orderUpdate.ACTUALEND_DTG = Utility.ConvertToUtcDateTime(e)
-                      this.setState({orderUpdate})
-                    }} 
-                  />
-                </div>
-                <br/>
-                <div style={{textAlign: 'right'}}>
-                  <SMButton onClick={()=>this.onUpdate()}>Cập nhật</SMButton>
-                </div>
-              </PopupDialog>
-            }
+            {this.renderPopup()}
         </div>
     )
   }

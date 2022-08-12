@@ -13,6 +13,7 @@ import CARCATEGORY from '../../../entities/CarCategory/CARCATEGORY';
 import { IDataManageList } from '../../../Interfaces/iData';
 import OrderStore from '../../../Stores/OrderStore';
 import HttpUtils from '../../../Utils/HttpUtils';
+import Utility from '../../../Utils/Utility';
 import ItemCar from './ItemCar';
 
 interface IProps{
@@ -55,6 +56,8 @@ export default class UserOrder extends Component<IProps, IState> {
   async onSubmit(){
     const dtoResponse = new CARDTO();
     dtoResponse.id_Category = this.state.id_Category;
+    dtoResponse.fromDate = Utility.ConvertToUtcDateTime(this.props.OrderStore?.planStartDTG);
+    dtoResponse.toDate = Utility.ConvertToUtcDateTime(this.props.OrderStore?.planEndDTG);
     const res = await HttpUtils.post<CARDTO>(
       ApiUrl.List_Select_Car,
       SMX.ApiActionCode.SetupDisplay,
@@ -89,7 +92,8 @@ export default class UserOrder extends Component<IProps, IState> {
                     placeholder="Bắt đầu dự định" 
                     selectedDate={OrderStore?.planStartDTG} 
                     onChange={(e)=>OrderStore?.handlePlanStartDTG(e)}    
-                    required={true}         
+                    required        
+                    showTime
                   />
                 </div>
                 <div className ="col-sm-6 col-md-2 p-2">
@@ -97,8 +101,9 @@ export default class UserOrder extends Component<IProps, IState> {
                     placeholder="Kết thúc dự định" 
                     selectedDate={OrderStore?.planEndDTG} 
                     onChange={(e)=>OrderStore?.handlePlanEndDTG(e)} 
-                    required={true}
+                    required
                     minDate={OrderStore?.planStartDTG}
+                    showTime
                   />
                 </div>
                 <div className ="col-sm-6 col-md-2 p-2">

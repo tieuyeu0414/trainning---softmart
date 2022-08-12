@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SM.Training.BookingCar.Biz;
 using SM.Training.SharedComponent.Entities;
+using System;
 using System.Collections.Generic;
 
 namespace SM.Trainning.Api.ControllerWebs
@@ -85,7 +86,7 @@ namespace SM.Trainning.Api.ControllerWebs
         {
             CARBiz biz = new CARBiz();
             CARDTO dtoResponse = new CARDTO();
-            var _getListSelect = biz.GetAllSelectCAR((int)dtoRequest.id_Category);
+            var _getListSelect = biz.GetAllSelectCAR((int)dtoRequest.id_Category, (DateTime)dtoRequest.fromDate, (DateTime)dtoRequest.toDate);
             dtoResponse.CARs = _getListSelect.cars;
             return dtoResponse;
         }
@@ -114,5 +115,7 @@ namespace SM.Trainning.Api.ControllerWebs
         public int? pageSize { get; set; }
         public int? id_Category { get; set; }
         public List<int> listID { get; set; }
+        public DateTime? fromDate { get; set; }
+        public DateTime? toDate { get; set; }
     }
 }

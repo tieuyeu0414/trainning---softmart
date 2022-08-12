@@ -70,6 +70,19 @@ namespace SM.Trainning.Api.ControllerWebs
             dtoResponse.number = _updateStatus.itemData;
             return dtoResponse;
         }
+
+
+        //delete Service_Order
+        [HttpPost]
+        [Route("auto-delete")]
+        public SERVICE_ORDERDTO AutoDeleteSERVICE_ORDER([FromBody] SERVICE_ORDERDTO request)
+        {
+            SERVICE_ORDERBiz biz = new SERVICE_ORDERBiz();
+            SERVICE_ORDERDTO dtoResponse = new SERVICE_ORDERDTO();
+            var _updateStatus = biz.AutoDeleteSERVICE_ORDER();
+            dtoResponse.number = _updateStatus.number;
+            return dtoResponse;
+        }
     }
 
     public class SERVICE_ORDERDTO

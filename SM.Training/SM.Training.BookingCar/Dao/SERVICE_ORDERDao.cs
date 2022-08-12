@@ -37,26 +37,28 @@ namespace SM.Training.BookingCar.Dao
                       //ORDER BY enOrder.ORDER_ID DESC";
             if (!String.IsNullOrWhiteSpace(item.CUSTOMER_NAME))
             {
-                totalString = String.Format(totalString + "AND LOWER(CUSTOMER_NAME) LIKE LOWER('{0}')", BuildLikeFilter(item.CUSTOMER_NAME));
+                totalString += String.Format(totalString + " AND CUSTOMER_NAME COLLATE BINARY_CI LIKE '{0}'", BuildLikeFilter(item.CUSTOMER_NAME));
             }
-            if (!String.IsNullOrWhiteSpace(item.STATUS.ToString()))
+            if (item.STATUS != null)
             {
-                totalString = String.Format(totalString + "AND STATUS = {0}", item.STATUS);
+                totalString += " AND STATUS = :STATUS";
             }
-            if (!String.IsNullOrWhiteSpace(item.PLANSTART_DTG.ToString()))
+            if (item.PLANSTART_DTG != null)
             {
-                totalString = String.Format(totalString + "AND TRUNC(PLANSTART_DTG) >= TO_DATE('{0:dd/MM/yyyy}','dd/mm/yyyy')", item.PLANSTART_DTG);
+                totalString = String.Format(totalString + " AND TRUNC(PLANSTART_DTG) >= TO_DATE('{0:dd/MM/yyyy}','dd/mm/yyyy')", item.PLANSTART_DTG);
             }
-            if (!String.IsNullOrWhiteSpace(item.PLANEND_DTG.ToString()))
+            if (item.PLANEND_DTG != null)
             {
-                totalString = String.Format(totalString + "AND PLANEND_DTG <= TO_DATE('{0:dd/MM/yyyy}','dd/mm/yyyy')", item.PLANEND_DTG);
+                totalString = String.Format(totalString + " AND TRUNC(PLANEND_DTG) <= TO_DATE('{0:dd/MM/yyyy}','dd/mm/yyyy')", item.PLANEND_DTG);
             }
-            if (item.CARCATEGORY_ID != 0)
+            if (item.CARCATEGORY_ID != null)
             {
-                totalString = String.Format(totalString + "AND enCar.CATEGORY_ID = {0}", item.CARCATEGORY_ID);
+                totalString += " AND enCar.CATEGORY_ID = :CARCATEGORY_ID";
             }
             sql = String.Format(sql, totalString);
             OracleCommand or = new OracleCommand(sql);
+            or.Parameters.Add(":STATUS", item.STATUS);
+            or.Parameters.Add(":CARCATEGORY_ID", item.CARCATEGORY_ID);
             using (DataContext dataContext = new DataContext())
             {
                 var count = 0;
@@ -108,6 +110,20 @@ namespace SM.Training.BookingCar.Dao
             using (DataContext dataContext = new DataContext())
             {
                 var query = dataContext.DeleteItem<SERVICE_ORDER>(id);
+                return query;
+            }
+        }
+
+
+        //gets Service_Order
+        public List<SERVICE_ORDER> GetsSERVICE_ORDER()
+        {
+            var totalString = String.Empty;
+            var sql = @"SELECT * FROM SERVICE_ORDER WHERE DELETED = 0 AND STATUS = 1";
+            OracleCommand or = new OracleCommand(sql);
+            using (DataContext dataContext = new DataContext())
+            {
+                var query = dataContext.ExecuteSelect<SERVICE_ORDER>(or);
                 return query;
             }
         }

@@ -76,10 +76,31 @@ namespace SM.Training.BookingCar.Dao
         }
 
 
-        //get all Car - select
-        public List<CAR> GetAllSelectCAR(int id_Category)
+        //get by id Service_Order - Time
+        public List<SERVICE_ORDER> GetAllSelectSERVICE_ORDER(DateTime fromDate, DateTime toDate)
         {
-            var sql = "SELECT * FROM CAR WHERE DELETED = 0 AND CATEGORY_ID = :id_Category ORDER BY CAR_ID ASC";
+            var sql = @"SELECT 
+                        enOrder.CAR_ID
+                      FROM SERVICE_ORDER enOrder
+                      WHERE enOrder.DELETED = 0 
+                      AND TO_CHAR(enOrder.PLANSTART_DTG, 'DD-MM-YYYY HH24:MI:SS') >= '{0:dd-MM-yyyy HH:mm:ss}'
+                      AND TO_CHAR(enOrder.PLANEND_DTG, 'DD-MM-YYYY HH24:MI:SS') <= '{1:dd-MM-yyyy HH:mm:ss}'
+                      AND STATUS IN (1, 2)
+                      ";
+            sql = String.Format(sql, fromDate, toDate);
+            OracleCommand oracleCommand = new OracleCommand(sql);
+            using (DataContext dataContext = new DataContext())
+            {
+                var query = dataContext.ExecuteSelect<SERVICE_ORDER>(oracleCommand);
+
+                return query;
+            }
+        }
+        //get all Car - select
+        public List<CAR> GetAllSelectCAR(int id_Category, List<int> listNumber)
+        {
+            var sql = "SELECT * FROM CAR WHERE DELETED = 0 AND CATEGORY_ID = :id_Category AND CAR_ID NOT IN ({0}) ORDER BY CAR_ID ASC";
+            sql = string.Format(sql, BuildInCondition(listNumber));
             OracleCommand oracleCommand = new OracleCommand(sql);
             oracleCommand.Parameters.Add(":id_Category", id_Category);
             using (DataContext dataContext = new DataContext())
@@ -88,6 +109,14 @@ namespace SM.Training.BookingCar.Dao
                 return query;
             }
         }
+
+        //public List<int> GetAllSelectCAR(int id_Category, List<int> listNumber)
+        //{
+        //    using (DataContext dataContext = new DataContext())
+        //    {
+        //        return listNumber;
+        //    }
+        //}
 
         //search list id Car - select
         public List<CAR> SearchIdCAR(List<int> listID)

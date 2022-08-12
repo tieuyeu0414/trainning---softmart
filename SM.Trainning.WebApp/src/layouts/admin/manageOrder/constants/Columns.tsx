@@ -51,7 +51,11 @@ export const columns: IColumns[] = [
         key: 'planStartDTG',
         align: 'center',
         cell: (data: SERVICE_ORDER) => {
-            return <div>{moment(data.PLANSTART_DTG).format('DD-MM-YYYY')} - {moment(data.PLANEND_DTG).format('DD-MM-YYYY')}</div>
+            return <div>
+                {moment(data.PLANSTART_DTG).format('DD-MM-YYYY H:mm:ss')} 
+                <br/> 
+                {moment(data.PLANEND_DTG).format('DD-MM-YYYY H:mm:ss')}
+                </div>
         }
     },
     {
@@ -59,7 +63,11 @@ export const columns: IColumns[] = [
         key: 'actualStartDTG',
         align: 'center',
         cell: (data: SERVICE_ORDER) => {
-            return <div>{moment(data.ACTUALSTART_DTG).format('DD-MM-YYYY')} - {moment(data.ACTUALEND_DTG).format('DD-MM-YYYY')}</div>
+            return <div>
+                {moment(data.ACTUALSTART_DTG).format('DD-MM-YYYY H:mm:ss')} 
+                <br/> 
+                {moment(data.ACTUALEND_DTG).format('DD-MM-YYYY H:mm:ss')}
+                </div>
         }
     },
     {

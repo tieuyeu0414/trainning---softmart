@@ -7,6 +7,10 @@ import { BaseDTO } from "../BaseParam";
 
 		public id_Category? : number;
 
+		public fromDate?: Date;
+
+		public toDate?: Date;
+
 		public pageIndex?: number;
 
 		public pageSize? : number;

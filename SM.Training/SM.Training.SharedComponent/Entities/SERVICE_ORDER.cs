@@ -174,7 +174,7 @@ namespace SM.Training.SharedComponent.Entities
         //[PropertyEntity("LIST_ID", false, false)]
         public List<int> LIST_ID { get; set; }
 
-        public int CARCATEGORY_ID { get; set; }
+        public int? CARCATEGORY_ID { get; set; }
 
         [PropertyEntity("NAME_CAR", false, false)]
         public string NAME_CAR { get; set; }

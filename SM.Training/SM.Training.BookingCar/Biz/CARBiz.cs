@@ -69,10 +69,18 @@ namespace SM.Training.BookingCar.Biz
 
 
         //get all Car - select
-        public (List<CAR> cars, object obj) GetAllSelectCAR(int id_Category)
+
+        public (List<CAR> cars, object obj) GetAllSelectCAR(int id_Category, DateTime fromDate, DateTime toDate)
         {
             CARDao dao = new CARDao();
-            var lstItem = dao.GetAllSelectCAR(id_Category);
+            List<int> listNumber = new List<int>();
+            listNumber.Add(0);
+            var x = dao.GetAllSelectSERVICE_ORDER(fromDate, toDate);
+            foreach (var item in x)
+            {
+                listNumber.Add((int)item.CAR_ID);
+            }
+            var lstItem = dao.GetAllSelectCAR(id_Category, listNumber);
             return (lstItem, null);
         }
 

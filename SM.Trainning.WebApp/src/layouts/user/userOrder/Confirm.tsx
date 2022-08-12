@@ -125,8 +125,8 @@ export default class Confirm extends Component<IProps, IState> {
     })
 
     const { serviceOrder } = this.state
-    serviceOrder.PLANSTART_DTG = this.props.OrderStore?.planStartDTG;
-    serviceOrder.PLANEND_DTG = this.props.OrderStore?.planEndDTG;
+    serviceOrder.PLANSTART_DTG = new Date(moment(this.props.OrderStore?.planStartDTG).format('DD-MM-YYYY H:mm:ss'));
+    serviceOrder.PLANEND_DTG = new Date(moment(this.props.OrderStore?.planEndDTG).format('DD-MM-YYYY H:mm:ss'));
     serviceOrder.LIST_ID = this.props.OrderStore?.list_IDCar;
     serviceOrder.TIME_CATEGORY = 1;
     this.setState({serviceOrder})
@@ -134,7 +134,11 @@ export default class Confirm extends Component<IProps, IState> {
 
   async onSubmit(){
     const dtoResponse = new SERVICE_ORDERDTO();
-    dtoResponse.SERVICE_ORDER = this.state.serviceOrder;
+    dtoResponse.SERVICE_ORDER = {
+      ...this.state.serviceOrder,
+      PLANSTART_DTG: Utility.ConvertToUtcDateTime(this.state.serviceOrder.PLANSTART_DTG),
+      PLANEND_DTG: Utility.ConvertToUtcDateTime(this.state.serviceOrder.PLANEND_DTG),
+    };
     await HttpUtils.post<SERVICE_ORDERDTO>(
       ApiUrl.Insert_ServiceOrder,
       SMX.ApiActionCode.AddNewItem,
@@ -215,10 +219,11 @@ export default class Confirm extends Component<IProps, IState> {
                     <DatePicker 
                       selectedDate={serviceOrder.PLANSTART_DTG} 
                       onChange={(e)=>{
-                        serviceOrder.PLANSTART_DTG = Utility.ConvertToUtcDateTime(e);
+                        serviceOrder.PLANSTART_DTG = e;
                         this.setState({serviceOrder})
                       }} 
                       required={true}
+                      showTime
                     />
                   </div>
                   <div className="grid-item">
@@ -226,11 +231,12 @@ export default class Confirm extends Component<IProps, IState> {
                     <DatePicker 
                       selectedDate={serviceOrder.PLANEND_DTG} 
                       onChange={(e)=>{
-                        serviceOrder.PLANEND_DTG = Utility.ConvertToUtcDateTime(e);
+                        serviceOrder.PLANEND_DTG = e;
                         this.setState({serviceOrder})
                       }} 
                       minDate={serviceOrder.PLANEND_DTG}
                       required={true}
+                      showTime
                     />
                   </div>
                   <div className="grid-item">

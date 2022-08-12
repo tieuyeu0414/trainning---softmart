@@ -118,5 +118,29 @@ namespace SM.Training.BookingCar.Biz
             var itemData = dao.DeleteSERVICE_ORDER(id);
             return (null, itemData);
         }
+
+
+        //auto delete Service_Order
+        public (int number, object obj) AutoDeleteSERVICE_ORDER()
+        {
+            SERVICE_ORDERDao dao = new SERVICE_ORDERDao();
+
+            var x = dao.GetsSERVICE_ORDER();
+           
+            foreach (var item in x)
+            {
+                DateTime checkTime = new DateTime();
+                DateTime ngaymuon = Convert.ToDateTime(item.CREATEDDTG);
+                DateTime ngaytra = Convert.ToDateTime(checkTime);
+                TimeSpan Time = ngaytra - ngaymuon;
+                int TongSoNgay = Time.Minutes;
+
+                if (TongSoNgay == 15)
+                {
+                    dao.DeleteSERVICE_ORDER((int)item.ORDER_ID);
+                }
+            }
+            return (1, null);
+        }
     }
 }
